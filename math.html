@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script>
+            function fac() {
+                var n = document.getElementById('n').value;
+                var r = '<ul>';
+                for (var i=1; i<=n; i++)
+                {
+                    if(n%i == 0)
+                    r = r + '<li class="factor">' + i +'</li>';
+
+                }
+                r = r + '</ul>';
+                document.getElementById("fact").innerHTML = r;
+            }
+        </script>
+        <style>
+            .factor {
+                font-size: large;
+            }
+            h1{
+                background: lightblue;
+            }
+            #fact{
+                background: lavender;
+            }
+        </style>
+</head>
+<body>
+    <h1>Welcome to Math Solver</h1>
+    <label for="n"> Enter n: <br /><br /></label>
+    <input type="text" id="n" /> <br /><br />
+    <button onclick="fac()">Find Factors</button>
+    
+    <div id="fact"></div>
+</body>
+</html>
